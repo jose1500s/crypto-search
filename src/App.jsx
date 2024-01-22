@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import Formulario from './components/Formulario'
+import Resultado from './components/Resultado'
 import cryptoBg from './assets/bg-2.png'
 
 const Contenedor = styled.div`
@@ -73,6 +74,7 @@ function App() {
         <Formulario
           setMonedas={setMonedas}
         />
+        {resultado.PRICE && <Resultado resultado={resultado} />}
       </div>
     </Contenedor>
   )
